@@ -12,13 +12,13 @@
     <div class='header_img'>
         <div class='header_title'><span> your list </span></div>
     </div>
-    <div class = 'app_container'>
+    <div class= 'app_container'>
     <form method='post' action='/'>
       <input type="text" id="todoInput" name="task" value="" placeholder="Add a Todo">
       <input type="submit" id='add' value="+"><i class="fa fa-pencil" aria-hidden="true"></i>{{#errors}}<div class= 'errors'>  {{msg}}</div>{{/errors}}
     </form>
-    <div class = 'todoList'>
-      <h2>get this done</h2>
+    <div class= 'todoList'>
+      <span >get this done</span>
       <ul>
         {{#todos}}
             {{^checked}}          
