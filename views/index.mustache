@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <title>ToDoListApp</title>
   </head>
   <body>
     <div class='header_img'>
-        <div class='header_title'><span> your list </span></div>
+        <div class='header_title'>your list </div>
     </div>
     <div class= 'app_container'>
     <form method='post' action='/'>
       <input type="text" id="todoInput" name="task" value="" placeholder="Add a Todo">
-      <input type="submit" id='add' value="+"><i class="fa fa-pencil" aria-hidden="true"></i>{{#errors}}<div class= 'errors'>  {{msg}}</div>{{/errors}}
+      <input type="submit" id='add' value="add"><i class="fa fa-pencil" aria-hidden="true"></i>{{#errors}}<div class= 'errors'>  {{msg}}</div>{{/errors}}
     </form>
     <div class= 'todoList'>
       <span >get this done</span>
@@ -23,7 +22,7 @@
         {{#todos}}
             {{^checked}}          
               <li>
-                <form method='post' action='/{{task}}'>
+                <form method='post' action='/'{{task}}>
                   <input type="submit" value="Done">  {{task}}
                 </form>
               </li>

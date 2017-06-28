@@ -2,13 +2,12 @@
 
 *{
   box-sizing: border-box;
-  font-family: 'Londrina Shadow', cursive;
+  font-family: Helvetica, Sans-Serif;
   background-color: #6186A1;
 }
 
 body{
-    height: 100vh;
-    padding: 20px;
+   width:100%;
 }
 
 img {
@@ -17,25 +16,20 @@ img {
 }
 
 .header_title{
-    display: flex;
-    align-items: center;
-    position: absolute; 
-    top: 270px;
-    left: 919px;
-}
-
-.header_title span{
     color: white; 
     font: bold 45px/45px Helvetica, Sans-Serif; 
     letter-spacing: 16px;  
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px; 
+    float: right;
+    margin-top: 62px;
+    margin-right: 92px;
 }
 
 .header_img {
     background-image: url('./images/lightsphoto.jpeg');
-    height: 400px;
+    height: 250px;
     width: 100%;
     background-size: contain;
     border: 2px groove darkgray;
@@ -47,23 +41,29 @@ img {
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 2px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+
 }
 
 .app_container{
     display: flex;
     justify-content: space-around;
-    background-image: url('./images/notes.jpg');
+    background-image: url('./images/pexels.jpeg');
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    border: 2px groove darkgray;
     position: relative;
-    height: 100vh;
+    height: 150vh;
     align-items: center;  
-    border-radius: 100px / 50px; 
+    padding-top: 400px;
 }
 
 form {
     display:flex;
+    height:38px;
     width:32%;
     color:black;
     list-style-type: none;
@@ -95,6 +95,7 @@ form {
     background-repeat: no-repeat;
     background-size: cover;
     background: rgba(0, 0, 0, 0.7);
+    padding-left: 74px;
 }
 
 .fa fa-pencil {
@@ -103,13 +104,14 @@ form {
     filter: invert();
 }
 
-ul style {
+ul {
    height: 0px;
 }
 
 span{
     height: 0px;
 }
+
 .completed{
     display:flex;
     width:32%;
