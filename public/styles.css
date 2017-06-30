@@ -3,11 +3,11 @@
 *{
   box-sizing: border-box;
   font-family: Helvetica, Sans-Serif;
-  background-color: #6186A1;
 }
 
 body{
    width:100%;
+   margin:0;
 }
 
 img {
@@ -29,7 +29,7 @@ img {
 
 .header_img {
     background-image: url('./images/lightsphoto.jpeg');
-    height: 250px;
+    height: 150px;
     width: 100%;
     background-size: contain;
     border: 2px groove darkgray;
@@ -49,45 +49,50 @@ img {
 }
 
 .app_container{
-    display: flex;
-    justify-content: space-around;
     background-image: url('./images/pexels.jpeg');
     background-position: center;
     background-size: cover;
     border: 2px groove darkgray;
     position: relative;
-    height: 150vh;
-    align-items: center;  
-    padding-top: 400px;
+    height: 150vh;  
+    padding-top: 200px;
 }
 
-form {
+.forms {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+
+
+}
+
+/*form {
     display:flex;
     height:38px;
     width:32%;
     color:black;
     list-style-type: none;
-}
+}*/
 
-#id {
+/*#id {
     background-color: #9F6B39;
     border: none;
     color: white;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-}
+}*/
 
-#todoInput {
+/*#todoInput {
     width: 100%;
     background-color: white;
-}
+}*/
 
-.todoList{
+/*.todoList{
     display:flex;
-    width:32%;
-    height: 348px;
-    border-radius: 70%;
     font: bold 45px/45px Helvetica, Sans-Serif;
     color:white;
     list-style-type: none;
@@ -96,30 +101,19 @@ form {
     background-size: cover;
     background: rgba(0, 0, 0, 0.7);
     padding-left: 74px;
-}
+}*/
 
-.fa fa-pencil {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    filter: invert();
-}
 
-ul {
-   height: 0px;
-}
 
-span{
-    height: 0px;
-}
 
-.completed{
+/*.completed{
     display:flex;
     width:32%;
     color:white;
     list-style-type: none;
     text-decoration: line-through;
     background: rgba(0, 0, 0, 0.7);
-}
+}*/
 
 
 
