@@ -34,24 +34,20 @@ app.post('/', (request, response) => {
           
       newTodo.task = task;
       newTodo.checked = false;
-        
+      newTodo.id = todos.length;  
       todos.push(newTodo);
       response.render('index',{todos:todos});
     }   
 });
 
- app.post('/:taskName', (request, response)=> {
+ app.post('/:id', (request, response)=> {
    
-   var taskToComplete = request.params.taskName;
-   
-    for (var i = 0; i<todos.length; i++) {
-      
-      if(taskToComplete == todos[i].task) {
-          
-          todos[i].checked = true;
-      }
-   }
-   console.log(todos);
+   var taskToComplete = request.params.task;
+   console.log(taskToComplete);
+    var newDo = parseInt(request.params.id);
+    var todoFind = todos.find(q => q.id === newDo);
+   todoFind.checked = true;
+   console.log(todoFind);
       response.render('index',{todos:todos});
 
  })
